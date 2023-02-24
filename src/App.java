@@ -1,5 +1,7 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        int a = 123;
+        System.out.println(a*4);
+        Test.greet();
     }
 }
