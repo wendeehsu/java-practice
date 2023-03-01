@@ -7,13 +7,8 @@ public class Test {
         // testSwitchCase(15);
         // calculator();
 
-        for (int i = 1; i <= 10; i++) {
-            String s = "";
-            for (int j = 1; j <= 10; j++) {
-                s += i*j + " ";
-            }
-            System.out.println(s);
-        }
+        for (int i = 0; i < 5; i++)
+            System.out.println(isPalin());
     }
 
     public static void greet() {
@@ -57,5 +52,19 @@ public class Test {
             default:
                 System.out.println("non valid operator");
         }
+    }
+
+    public static boolean isPalin() {
+        Scanner input = new Scanner(System.in);
+        String s = input.nextLine();
+        int i = 0;
+        int j = s.length() -1;
+        while (i < j) {
+            if (s.charAt(i) != s.charAt(j))
+                return false;
+            i++;
+            j--;
+        }
+        return true;
     }
 }
