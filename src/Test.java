@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Test {
@@ -6,8 +8,8 @@ public class Test {
     public static void main(String[] args) {
         // testSwitchCase(15);
         // calculator();
-
-        printStars(5);
+        // printStars(5);
+        printIteminList();
     }
 
     public static void greet() {
@@ -78,5 +80,17 @@ public class Test {
 
             System.out.println(s);
         }
+    }
+
+    public static void printIteminList() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        Scanner input = new Scanner(System.in);
+        System.out.print("How many integers?");
+        int num = input.nextInt();
+        for (int i = 0; i < num; i++) {
+            arr.add(input.nextInt());
+        }
+        Collections.sort(arr);
+        System.out.println("sorted:" + arr.toString());
     }
 }
