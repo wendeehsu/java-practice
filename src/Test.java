@@ -7,8 +7,7 @@ public class Test {
         // testSwitchCase(15);
         // calculator();
 
-        for (int i = 0; i < 5; i++)
-            System.out.println(isPalin());
+        printStars(5);
     }
 
     public static void greet() {
@@ -66,5 +65,18 @@ public class Test {
             j--;
         }
         return true;
+    }
+
+    public static void printStars(int num) {
+        for(int i = 1; i <= num; i++){
+            String s = "";
+            
+            for (int j = 1; j <= num-i; j++)
+                s += " ";
+            for (int j = 1; j <= i; j++)
+                s += "*";
+
+            System.out.println(s);
+        }
     }
 }
